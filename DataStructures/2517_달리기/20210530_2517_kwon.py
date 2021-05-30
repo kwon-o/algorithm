@@ -1,7 +1,7 @@
 import heapq
 N,*l=map(int,open("input.txt", "r").read().split())
 heap=[]
-for i,n in enumerate(l):
+for i, n in enumerate(l):
     heapq.heappush(heap, (i,n))
 for i in heap:
     ans=1
