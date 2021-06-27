@@ -1,0 +1,10 @@
+n=int(input())
+l=[]
+for i in range(n//5+1):
+	for j in range(n//3+1):
+		if 5*i+j*3==n:
+			l.append(i+j)
+if len(l)>0:
+	print(min(l))
+else:
+	print(-1)
