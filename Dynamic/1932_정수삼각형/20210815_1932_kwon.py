@@ -13,8 +13,5 @@ for i in range(1,n):
             b=0
         else:
             b=l[i-1][j]+l[i][j]
-        if a>b:
-            m[i][j]=a
-        else:
-            m[i][j]=b
+        m[i][j]=max(a,b)
 print(max(m[n-1]))
