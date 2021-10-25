@@ -41,6 +41,8 @@ def rotation(ro, lf):
 
 
 while True:
+    anw += 1
+
     if direction == 'right':
         headLocation[1] += 1
     elif direction == 'left':
@@ -51,16 +53,14 @@ while True:
         headLocation[0] += 1
 
     if headLocation[0] < 1 or headLocation[1] < 1 or headLocation[0] > N or headLocation[1] > N or headLocation in snake :
-        print(anw+1)
+        print(anw)
         break
     else:
+        snake.append(headLocation.copy())
         if headLocation not in apple:
             snake.popleft()
         else:
             apple.remove(headLocation)
 
-    snake.append(headLocation.copy())
-
-    anw += 1
     if anw in rotationDic.keys():
         direction = rotation(direction, rotationDic[anw])
